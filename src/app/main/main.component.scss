@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-top: 40px;
+  padding: 0 38px;
+  width: 100%;
+}
+
+::ng-deep .pagination {
+  justify-content: center;
+  list-style-type: none;
+  display: flex;
+}
+
+::ng-deep .page-item {
+  .page-link {
+    border: 1px solid #ddd;
+    margin-left: 2px;
+    padding: 5px 9px;
+    cursor: pointer;
+  }
+  &.disabled {
+    opacity: .5;
+  }
+  &.active {
+    .page-link {
+      background: #DDDDDD;
+    }
+  }
+}

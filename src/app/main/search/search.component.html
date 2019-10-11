@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+  <div class="search-container">
+    <mat-form-field>
+      <input formControlName="search" matInput placeholder="Please type id">
+    </mat-form-field>
+    <button mat-button (click)="search()">Search</button>
+    <button mat-button (click)="clear()">Clear</button>
+  </div>
+</form>

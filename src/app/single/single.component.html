@@ -1,0 +1,30 @@
+<div class="single">
+  <div class="header">
+    <h1>Pokemon: "{{ data?.name }}"</h1>
+    <button mat-button [routerLink]="['/']">Go to main</button>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="content">
+    <div class="logo">
+      <img [src]="data?.sprites.front_default" alt="logo">
+    </div>
+    <div class="stats">
+      <div class="stats__item">
+        <div><b>Skill</b></div>
+        <div><b>Base stat</b></div>
+        <div><b>effort</b></div>
+      </div>
+      <div class="stats__item" *ngFor="let stat of data.stats">
+        <div>{{ stat.stat.name }}</div>
+        <div>{{ stat.base_stat }}</div>
+        <div>{{ stat.effort }}</div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <mat-divider></mat-divider>
+  <div class="actions">
+    <button [disabled]="wait" mat-button (click)="changePokemon(false)">Prev</button>
+    <button [disabled]="wait" mat-button (click)="changePokemon(true)">Next</button>
+  </div>
+</div>

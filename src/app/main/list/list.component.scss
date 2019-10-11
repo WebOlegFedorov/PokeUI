@@ -1,0 +1,10 @@
+table {
+  width: 100%;
+}
+
+.custon-row {
+  cursor: pointer;
+  &:hover {
+    background: #ddd;
+  }
+}

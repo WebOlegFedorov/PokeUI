@@ -1,0 +1,8 @@
+<div class="main">
+  <h1>Pokemon UI</h1>
+
+  <app-search (emitClear)="clear($event)" (emitSearch)="search($event)"></app-search>
+  <app-list [list]="list"></app-list>
+  <br>
+  <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+</div>
